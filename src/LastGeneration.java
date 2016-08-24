@@ -1,16 +1,15 @@
-import java.util.List;
-
-/**
- * Created by Jihoon on 6/18/2016.
- */
 public class LastGeneration {
-
     static public void main(String[] args) {
-        final Generation generation = new Generation();
+        final Generation firstGeneration = new Generation();
         for(final String name : Names.FAMILY_NAMES) {
-            generation.addFamily(new Family(name));
+            firstGeneration.addFamilyUnit(new FamilyUnit(name));
         }
-        generation.print();
-    }
+        final Generations generations = new Generations(firstGeneration);
+        generations.getCurrentGeneration().printGenerationStats();
 
+        for(int i = 0; i < 10; i++) {
+            generations.createNextGeneration();
+            generations.getCurrentGeneration().printGenerationStats();
+        }
+    }
 }

@@ -1,2 +1,2 @@
 #LastGeneration
-A project aimed to observe how family names die out after generations, through simulation.
+A project aimed to observe how familyUnit names die out after generations, through simulation.
